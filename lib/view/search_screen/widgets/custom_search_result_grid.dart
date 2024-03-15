@@ -20,7 +20,7 @@ class CustomSearchResultGrid extends StatelessWidget {
                       height: MediaQuery.sizeOf(context).width * .8,
                       decoration: BoxDecoration(
                           image: DecorationImage(
-                        image: AssetImage(ImageConstants.searchImagesList[0]),
+                        image: AssetImage(ImageConstants.indiaImagesList[0]),
                         fit: BoxFit.cover,
                       )),
                     ),
@@ -34,7 +34,7 @@ class CustomSearchResultGrid extends StatelessWidget {
                           decoration: BoxDecoration(
                               image: DecorationImage(
                                   image: AssetImage(
-                                      ImageConstants.searchImagesList[1]),
+                                      ImageConstants.indiaImagesList[1]),
                                   fit: BoxFit.cover)),
                         ),
                         Container(
@@ -42,7 +42,7 @@ class CustomSearchResultGrid extends StatelessWidget {
                           decoration: BoxDecoration(
                               image: DecorationImage(
                                   image: AssetImage(
-                                      ImageConstants.searchImagesList[2]),
+                                      ImageConstants.indiaImagesList[2]),
                                   fit: BoxFit.cover)),
                         )
                       ],
@@ -61,7 +61,7 @@ class CustomSearchResultGrid extends StatelessWidget {
                           decoration: BoxDecoration(
                               image: DecorationImage(
                                   image: AssetImage(
-                                      ImageConstants.searchImagesList[1]),
+                                      ImageConstants.indiaImagesList[1]),
                                   fit: BoxFit.cover)),
                         ),
                         Container(
@@ -69,7 +69,7 @@ class CustomSearchResultGrid extends StatelessWidget {
                           decoration: BoxDecoration(
                               image: DecorationImage(
                                   image: AssetImage(
-                                      ImageConstants.searchImagesList[2]),
+                                      ImageConstants.indiaImagesList[2]),
                                   fit: BoxFit.cover)),
                         )
                       ],
@@ -81,7 +81,7 @@ class CustomSearchResultGrid extends StatelessWidget {
                       height: MediaQuery.sizeOf(context).width * .8,
                       decoration: BoxDecoration(
                           image: DecorationImage(
-                        image: AssetImage(ImageConstants.searchImagesList[0]),
+                        image: AssetImage(ImageConstants.indiaImagesList[0]),
                         fit: BoxFit.cover,
                       )),
                     ),
@@ -98,7 +98,7 @@ class CustomSearchResultGrid extends StatelessWidget {
             decoration: BoxDecoration(
                 color: index.isEven ? Colors.orange : Colors.red,
                 image: DecorationImage(
-                    image: AssetImage(ImageConstants.searchImagesList[index]),
+                    image: AssetImage(ImageConstants.indiaImagesList[index]),
                     fit: BoxFit.cover)),
           ),
         )

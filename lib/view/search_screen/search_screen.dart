@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:hotstar_clone_application/core/constants/color_constants.dart';
 import 'package:hotstar_clone_application/core/constants/image_constants.dart';
 import 'package:hotstar_clone_application/view/dummy_db.dart';
-import 'package:hotstar_clone_application/view/search_screen/widgets/custom_search_result_grid.dart';
 import 'package:hotstar_clone_application/view/search_screen/widgets/search_category_card.dart';
 
 class SearchScreen extends StatefulWidget {
@@ -16,6 +16,16 @@ class SearchScreen extends StatefulWidget {
 
 class _SearchScreenState extends State<SearchScreen> {
   int selectedItemIndex = 0;
+  List imagesList = [
+    ImageConstants.indiaImagesList,
+    ImageConstants.actionImagesList,
+    ImageConstants.comedyImagesList,
+    ImageConstants.crimeImagesList,
+    ImageConstants.dramaImagesList,
+    ImageConstants.romanceImagesList,
+    ImageConstants.thrillerImagesList,
+    ImageConstants.horrorImagesList,
+  ];
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -32,6 +42,7 @@ class _SearchScreenState extends State<SearchScreen> {
                 decoration: InputDecoration(
                     contentPadding:
                         EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                    // #1 textfield
                     prefixIcon: Icon(Icons.search),
                     hintText: "Movies, shows and more",
                     fillColor: ColorConstants.normalWhite,
@@ -70,6 +81,7 @@ class _SearchScreenState extends State<SearchScreen> {
                               selectedItemIndex = index;
                             });
                           },
+                          // #2   Categories
                           child: SearchCategoryCard(
                               index: index,
                               searchTabs: DummyDb.searchCategoryTabs,
@@ -79,15 +91,40 @@ class _SearchScreenState extends State<SearchScreen> {
                   )),
                 ),
               ),
+              // #3 Grid view images
               Expanded(
-                  child: SingleChildScrollView(
-                child: Column(
-                    children: List.generate(
-                        4,
-                        (index) => CustomSearchResultGrid(
-                              isIndexEven: index.isEven,
-                            ))),
-              ))
+                  child: GridView.custom(
+                gridDelegate: SliverQuiltedGridDelegate(
+                  crossAxisCount: 3,
+                  mainAxisSpacing: 4,
+                  crossAxisSpacing: 4,
+                  repeatPattern: QuiltedGridRepeatPattern.same,
+                  pattern: [
+                    QuiltedGridTile(2, 2),
+                    QuiltedGridTile(1, 1),
+                    QuiltedGridTile(1, 1),
+                    QuiltedGridTile(1, 1),
+                    QuiltedGridTile(1, 1),
+                    QuiltedGridTile(1, 1),
+                    QuiltedGridTile(1, 1),
+                    QuiltedGridTile(2, 2),
+                    QuiltedGridTile(1, 1),
+                    QuiltedGridTile(1, 1),
+                    QuiltedGridTile(1, 2),
+                  ],
+                ),
+                childrenDelegate: SliverChildBuilderDelegate(
+                    (context, index) => Container(
+                          height: MediaQuery.sizeOf(context).width * .8,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                            image: AssetImage(
+                                imagesList[selectedItemIndex][index]),
+                            fit: BoxFit.cover,
+                          )),
+                        ),
+                    childCount: imagesList[selectedItemIndex].length),
+              )),
             ],
           ),
         ),
