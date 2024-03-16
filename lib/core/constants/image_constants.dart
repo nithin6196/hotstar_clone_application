@@ -131,4 +131,16 @@ class ImageConstants {
     "assets/images/horror_tab_images/the menu.jpeg",
     "assets/images/horror_tab_images/the hills have eyes 2.jpeg",
   ];
+  static const List mySpaceProImagesList = [
+    "assets/images/my_space_images/iron man logo.png",
+    "assets/images/my_space_images/kids logo.png",
+  ];
+  static const List watchImagesList = [
+    "assets/images/my_space_images/big boss.webp",
+    "assets/images/my_space_images/ppl.webp",
+    "assets/images/my_space_images/12 th fail.webp",
+    "assets/images/my_space_images/the falcon and the winter soldier.webp",
+    "assets/images/my_space_images/avatar 2.webp",
+    "assets/images/my_space_images/antman 3.webp",
+  ];
 }
