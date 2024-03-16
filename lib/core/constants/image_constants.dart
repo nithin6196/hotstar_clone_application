@@ -137,10 +137,10 @@ class ImageConstants {
   ];
   static const List watchImagesList = [
     "assets/images/my_space_images/big boss.webp",
-    "assets/images/my_space_images/ppl.webp",
+    "assets/images/my_space_images/avatar 2.webp",
     "assets/images/my_space_images/12 th fail.webp",
     "assets/images/my_space_images/the falcon and the winter soldier.webp",
-    "assets/images/my_space_images/avatar 2.webp",
+    "assets/images/my_space_images/ppl.webp",
     "assets/images/my_space_images/antman 3.webp",
   ];
 }

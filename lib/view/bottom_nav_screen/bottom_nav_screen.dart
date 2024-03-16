@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:hotstar_clone_application/core/constants/color_constants.dart';
+import 'package:hotstar_clone_application/core/constants/image_constants.dart';
+import 'package:hotstar_clone_application/view/downloads_screen/downloads_screen.dart';
 import 'package:hotstar_clone_application/view/my_space_screen/my_space_screen.dart';
 import 'package:hotstar_clone_application/view/search_screen/search_screen.dart';
 
@@ -18,7 +20,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
     Container(color: Colors.red),
     SearchScreen(),
     Container(color: Colors.green),
-    Container(color: Colors.orange),
+    DownloadsScreen(),
     MySpaceScreen()
   ];
   @override
@@ -43,7 +45,12 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
             BottomNavigationBarItem(
                 icon: Icon(Icons.download_rounded), label: "Downloads"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.account_circle_outlined), label: "My Space"),
+                icon: CircleAvatar(
+                  radius: 15,
+                  backgroundImage:
+                      AssetImage(ImageConstants.mySpaceProImagesList[0]),
+                ),
+                label: "My Space"),
           ]),
     );
   }
