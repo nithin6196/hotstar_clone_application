@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:hotstar_clone_application/core/constants/color_constants.dart';
 import 'package:hotstar_clone_application/core/constants/image_constants.dart';
-import 'package:hotstar_clone_application/view/bottom_nav_screen/bottom_nav_screen.dart';
 import 'package:hotstar_clone_application/view/select_account_screen/select_account_screen.dart';
 
 class SplashScreen extends StatefulWidget {

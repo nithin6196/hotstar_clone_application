@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:hotstar_clone_application/core/constants/color_constants.dart';
 import 'package:hotstar_clone_application/core/constants/image_constants.dart';
 import 'package:hotstar_clone_application/view/downloads_screen/downloads_screen.dart';
+import 'package:hotstar_clone_application/view/home_screen/home_screen.dart';
 import 'package:hotstar_clone_application/view/my_space_screen/my_space_screen.dart';
 import 'package:hotstar_clone_application/view/search_screen/search_screen.dart';
+import 'package:hotstar_clone_application/view/trends_screen/trends_screen.dart';
 
 class BottomNavScreen extends StatefulWidget {
   const BottomNavScreen({super.key});
@@ -17,9 +19,9 @@ class BottomNavScreen extends StatefulWidget {
 class _BottomNavScreenState extends State<BottomNavScreen> {
   int selectedIndex = 0;
   List screenList = [
-    Container(color: Colors.red),
+    HomeScreen(),
     SearchScreen(),
-    Container(color: Colors.green),
+    TrendsScreen(),
     DownloadsScreen(),
     MySpaceScreen()
   ];

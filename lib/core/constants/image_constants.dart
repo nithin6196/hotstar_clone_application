@@ -143,4 +143,24 @@ class ImageConstants {
     "assets/images/my_space_images/ppl.webp",
     "assets/images/my_space_images/antman 3.webp",
   ];
+  static const List kidsImagesList = [
+    "assets/images/kids_images/hindi 2.webp",
+    "assets/images/kids_images/english.webp",
+    "assets/images/kids_images/tamil 2.webp",
+    "assets/images/kids_images/telugu.webp",
+    "assets/images/kids_images/malayalam.webp",
+    "assets/images/kids_images/bengali 2.webp",
+    "assets/images/kids_images/marathi.webp",
+    "assets/images/kids_images/kannada.webp",
+  ];
+  static const List languageLogoList = [
+    "assets/images/kids_images/hindi.webp",
+    "assets/images/kids_images/English logo.webp",
+    "assets/images/kids_images/tamil.webp",
+    "assets/images/kids_images/telugu 2.webp",
+    "assets/images/kids_images/malayalam 2.webp",
+    "assets/images/kids_images/bengali.webp",
+    "assets/images/kids_images/marathi 2.webp",
+    "assets/images/kids_images/kannada 2.webp",
+  ];
 }
