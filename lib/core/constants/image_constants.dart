@@ -163,4 +163,13 @@ class ImageConstants {
     "assets/images/kids_images/marathi 2.webp",
     "assets/images/kids_images/kannada 2.webp",
   ];
+  static const List homeImagesList = [
+    "assets/images/home_screen_images/sliding_images/big boss.webp",
+    "assets/images/home_screen_images/sliding_images/ng.webp",
+    "assets/images/home_screen_images/sliding_images/neymar.webp",
+    "assets/images/home_screen_images/sliding_images/mukundan unni.webp",
+    "assets/images/home_screen_images/sliding_images/sulaikha mansil.webp",
+    "assets/images/home_screen_images/sliding_images/palthu janwar.webp",
+    "assets/images/home_screen_images/sliding_images/mrs perfect.webp",
+  ];
 }

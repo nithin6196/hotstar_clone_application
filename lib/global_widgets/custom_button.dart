@@ -14,7 +14,8 @@ class CustomButton extends StatelessWidget {
       this.horizontalPadding = 0,
       this.onTap,
       this.icon = Icons.notifications_none,
-      this.isVisible = false});
+      this.isVisible = false,
+      this.iconColor});
   final String text;
   final Color textColor;
   final Color buttonColor;
@@ -23,6 +24,7 @@ class CustomButton extends StatelessWidget {
   final double horizontalPadding;
   final IconData icon;
   final bool isVisible;
+  final Color? iconColor;
 
   final void Function()? onTap;
 
@@ -44,7 +46,12 @@ class CustomButton extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                isVisible ? Icon(icon) : SizedBox(),
+                isVisible
+                    ? Icon(
+                        icon,
+                        color: iconColor,
+                      )
+                    : SizedBox(),
                 Text(
                   text,
                   style: TextStyle(
