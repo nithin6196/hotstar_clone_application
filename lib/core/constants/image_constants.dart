@@ -172,4 +172,13 @@ class ImageConstants {
     "assets/images/home_screen_images/sliding_images/palthu janwar.webp",
     "assets/images/home_screen_images/sliding_images/mrs perfect.webp",
   ];
+  static const List floatImagesList = [
+    "assets/images/home_screen_images/sliding_images/bigg boss logo.webp",
+    "assets/images/home_screen_images/sliding_images/ng logo.webp",
+    "assets/images/home_screen_images/sliding_images/neymar logo.webp",
+    "assets/images/home_screen_images/sliding_images/mukundan unni logo.webp",
+    "assets/images/home_screen_images/sliding_images/sulaikha mansil logo.webp",
+    "assets/images/home_screen_images/sliding_images/palthu janwar logo.webp",
+    "assets/images/home_screen_images/sliding_images/mrs perfect logo.webp",
+  ];
 }

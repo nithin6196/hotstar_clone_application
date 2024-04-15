@@ -3,10 +3,14 @@
 import 'package:flutter/material.dart';
 import 'package:hotstar_clone_application/controller/home_screen_controller.dart';
 import 'package:hotstar_clone_application/core/constants/color_constants.dart';
+import 'package:hotstar_clone_application/model/home_screen_model/home_screen_model.dart';
 
 class CustomShowsCard extends StatelessWidget {
-  const CustomShowsCard({super.key});
-
+  const CustomShowsCard({
+    super.key,
+    required this.itemModel,
+  });
+  final HomeScreenModel itemModel;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,7 +19,7 @@ class CustomShowsCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            HomeScreenController.homePicsList[0].text,
+            itemModel.text,
             textAlign: TextAlign.start,
             style: TextStyle(
                 color: ColorConstants.normalWhite,
@@ -27,7 +31,7 @@ class CustomShowsCard extends StatelessWidget {
             child: ListView.builder(
               shrinkWrap: true,
               scrollDirection: Axis.horizontal,
-              itemCount: HomeScreenController.homePicsList.length,
+              itemCount: itemModel.imagePath.length,
               itemBuilder: (context, index) => Padding(
                 padding: const EdgeInsets.all(5),
                 child: Container(
@@ -35,8 +39,7 @@ class CustomShowsCard extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5),
                       image: DecorationImage(
-                          image: AssetImage(HomeScreenController
-                              .homePicsList[index].imagePath[index]),
+                          image: AssetImage(itemModel.imagePath[index]),
                           fit: BoxFit.cover)),
                 ),
               ),
